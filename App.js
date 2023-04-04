@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import BannerMovies from './src/components/bannerFilmes';
+
 import Header from './src/components/header';
 import SearchBar from './src/components/searchbar';
 
