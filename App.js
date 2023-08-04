@@ -4,6 +4,7 @@ import BannerFilmes from './src/components/bannerFilmes';
 import Filmes from './src/data/movies'
 import Header from './src/components/header';
 import SearchBar from './src/components/searchbar';
+import CardMovies from './src/components/cardMovies';
 
 
 export default function App() {
@@ -15,12 +16,17 @@ export default function App() {
 
      <View style = {{width:'90%'}}>
     <FlatList
+    showsVerticalScrollIndicator= {false}
     horizontal = {true}
     data={Filmes}
     keyExtractor={(item)=> item.id}
     renderItem={({item})=> (
 
-      <Text> {item.nome}</Text>
+      <CardMovies
+                titulo={item.nome}
+                imagem={item.imagem}
+                nota={item.nota}
+              />
 
     )}
     
